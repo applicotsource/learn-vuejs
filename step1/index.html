@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Step1 ToDo Application</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <label>ToDoの内容<input type="text" v-model="todoText"></label>
+    <button @click="register">登録</button>
+    <ul>
+      <li v-for="todo in todoList">{{ todo }}</li>
+    </ul>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        todoText: '',
+        todoList: [],
+      },
+      methods: {
+        register() {
+          this.todoList.push(this.todoText)
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
