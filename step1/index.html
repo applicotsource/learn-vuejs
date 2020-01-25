@@ -13,6 +13,7 @@
   <div id="app">
     <label>ToDoの内容<input type="text" v-model="todoText"></label>
     <button @click="register">登録</button>
+    <p>あと{{ todoCount }}個</p>
     <ul>
       <li v-for="todo in todoList">{{ todo }}</li>
     </ul>
@@ -23,6 +24,11 @@
       data: {
         todoText: '',
         todoList: [],
+      },
+      computed: {
+        todoCount() {
+          return this.todoList.length
+        }
       },
       methods: {
         register() {
