@@ -21,9 +21,11 @@
   <script>
     var app = new Vue({
       el: '#app',
-      data: {
-        todoText: '',
-        todoList: [],
+      data() {
+        return {
+          todoText: '',
+          todoList: [],
+        }
       },
       computed: {
         todoCount() {
