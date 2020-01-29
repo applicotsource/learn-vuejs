@@ -12,7 +12,7 @@ export default {
   },
   data() {
     return {
-      dayList: [...Array(31).keys()].map(i => ++i) // [1, 2, 3, 4,....,60]
+      dayList: [...Array(31).keys()].map(i => ++i) // [1, 2, 3, 4, ..., 31]
     }
   }
 }
