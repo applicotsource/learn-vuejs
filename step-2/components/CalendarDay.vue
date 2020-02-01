@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     ...mapMutations({
-      addSchedule: 'schedule/add'
+      addSchedule: 'schedule/addSchedule'
     }),
   }
 }

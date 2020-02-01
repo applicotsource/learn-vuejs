@@ -12,7 +12,12 @@ export default {
   },
   data() {
     return {
-      dayList: [...Array(31).keys()].map(i => ++i) // [1, 2, 3, 4, ..., 31]
+      dayList: []
+    }
+  },
+  created() {
+    for (let i = 1; i <= 31; i++) {
+      this.dayList.push(i)
     }
   }
 }

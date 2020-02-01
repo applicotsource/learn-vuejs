@@ -1,5 +1,6 @@
 export const state = () => ({
   scheduleList: [], // Array<{ id: Number, day: Number, text: String }>
+  lastScheduleId: 0,
 })
 
 export const getters = {
@@ -9,9 +10,9 @@ export const getters = {
 }
 
 export const mutations = {
-  add (state, { day, text }) {
+  addSchedule (state, { day, text }) {
     state.scheduleList.push({
-      id: state.scheduleList.length + 1,
+      id: ++state.lastScheduleId,
       day,
       text,
     })
